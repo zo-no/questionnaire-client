@@ -1,8 +1,12 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 项目
 
-## Getting Started
+这是仿问卷星的c端项目
+> 项目链接：
+> - mock：GitHub - zo-no/questionnaire-mock: 访问卷星项目的mock程序
+> - 主程序（B端）：GitHub - zo-no/questionnaire-system: 模仿问卷星的项目
+> - c端：GitHub - zo-no/questionnaire-client: 仿问卷星的客户C端项目，使用nextjs
 
-First, run the development server:
+## 项目启动
 
 ```bash
 npm run dev
@@ -13,28 +17,20 @@ pnpm dev
 # or
 bun dev
 ```
+## 文件结构
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```c
+//src是工作目录
+src
+├── components -- 组件库
+│   ├── QuestionComponents -- 问卷组件(思路和B端一样)
+│   └── PageWrapper -- 问卷页面的包装器
+├── pages -- 页面 （文件路由）
+|   ├── api -- 编写api
+|   ├── question -- 问卷页
+|   ├── fail -- 失败页
+|   ├── success -- 成功页 
+|   └── index -- 首页
+├── services -- 前端请求
+└── styles -- 样式库
+```
